@@ -1,0 +1,27 @@
+#Version 0.1 - 6/6/2021
+
+## Map Changes:
+*edited provinces in canada
+
+## General gameplay changes:
+*made an event for the uk that asks them if they are a player if they want to release canada as a pupet and if they decline nothing changes.
+*added cbs that hpm doesnt have like tiny conquest, minor conquest, take capital and more.
+*added Walloon accepted to France
+
+
+## MultiPlayer changes:
+*added negotiated transfer cb
+*added grants 
+
+## General Balance changes
+*buffed russia litracy a bit
+*changed russia tech school from culture to army complex
+*gave Canada cores on British north America expect Newfoundland
+*increased infamy reduction to 0.3 when at peace and 0.1 when at war
+
+
+version 0.11 7/6/2021
+
+## bug fixes
+*fixed crashing at map intailizing
+ 

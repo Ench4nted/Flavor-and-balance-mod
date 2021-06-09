@@ -1,0 +1,31 @@
+political_decisions = {
+
+enact_Said_Bin_Sultan_reforms = {
+        picture = Said_Bin_Sultan
+        potential = {
+            tag = OMA
+            civilized = no
+            NOT = {
+             has_country_flag = Said_Bin_Sultan_reforms_enacted
+             year = 1856     
+           }
+        }
+        allow = {
+            year = 1836
+   
+        }
+
+        effect = {
+            set_country_flag = Said_Bin_Sultan_reforms_enacted
+            prestige = 10
+            treasury = 15000
+            military_reform = yes_foreign_training
+            economic_reform = yes_reformed_system 
+            economic_reform = finance_reform_two
+            add_country_modifier = {
+                name = Said_Bin_Sultan_reforms
+                duration = 7300
+             }
+       }
+   }
+}
