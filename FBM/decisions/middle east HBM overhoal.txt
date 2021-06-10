@@ -1,0 +1,203 @@
+political_decisions = {
+
+enact_Said_Bin_Sultan_reforms = {
+        picture = Said_Bin_Sultan
+        potential = {
+            tag = OMA
+            civilized = no
+            NOT = {
+             has_country_flag = Said_Bin_Sultan_reforms_enacted
+             year = 1856     
+           }
+        }
+        allow = {
+            year = 1836
+   
+        }
+
+        effect = {
+            set_country_flag = Said_Bin_Sultan_reforms_enacted
+            prestige = 10
+            treasury = 15000
+            military_reform = yes_foreign_training
+            economic_reform = yes_reformed_system 
+            economic_reform = finance_reform_two
+            add_country_modifier = {
+                name = Said_Bin_Sultan_reforms
+                duration = 7300
+             }
+       }
+   }
+
+
+
+
+
+      end_the_rashids_rule = {
+		  picture = become_saudi_arabia 
+		 potential = {
+              tag = NEJ
+              NOT = {
+                has_country_flag = end_rashids_rule
+            }
+                           }
+		
+		   allow = { 
+			HAL = {
+                exists = yes
+                   }
+        }
+           effect = { 
+		   casus_belli = {
+            target = HAL
+            type = conquest
+            months = 24
+            }
+            set_country_flag = end_rashids_rule
+	   }
+		
+		}
+
+
+
+
+
+      end_the_SAUDS_rule = {
+		  picture = become_saudi_arabia
+		  potential = {
+              tag = HAL
+              NOT = {
+                has_country_flag = end_saudi_rule
+            }
+                           }
+		
+		   allow = { 
+			NEJ = {
+                exists = yes
+                   }
+        }
+           effect = { 
+		   casus_belli = {
+            target = NEJ
+            type = conquest
+            months = 24
+            }
+                        set_country_flag = end_saudi_rule
+		}
+		
+		}
+
+
+
+        jihad_the_ottomans = {
+         picture = map_arabia
+		 potential = {
+              tag = HDJ
+			  
+		NOT = {
+                has_country_flag = jihad_the_ottomans
+            }
+		}
+		
+		allow = { 
+			TUR = {
+                exists = yes
+                   }
+            is_vassal = yes
+
+		
+		
+		}
+       effect = { 
+		     casus_belli = {
+             target = TUR
+             type = conquest
+             months = 24
+            }
+		set_country_flag = jihad_the_ottomans 
+		
+		military_reform = yes_foreign_artillery
+        military_reform = yes_foreign_weapons
+		military_reform = yes_foreign_training
+		}
+		
+   }
+	claim_bahrain_qatar_peninsula = {
+		picture = bahrain_trade
+		potential = {
+			OR = {
+				AND = {
+					tag = TUR
+					NOT = { has_country_flag = qatar_protection }
+					year = 1880
+				}
+				tag = PER
+				tag = NEJ
+				tag = HAL
+				tag = ARA
+				tag = OMA
+			}
+            is_canal_enabled = 2
+            revolution_n_counterrevolution = 1
+            NOT = {
+                has_country_flag = claimed_the_persian_gulf
+                 owns = 1165
+                 owns = 1162
+                 1165 = { is_core = THIS }
+                 1162 = { is_core = THIS }
+            }
+		}
+
+		allow = {
+			war = no
+            mass_politics = 1
+			is_greater_power = yes
+			OR = {
+				owns = 1164
+				owns = 1071
+				owns = 1167
+			}
+		}
+
+		effect = {
+			set_country_flag = claimed_the_persian_gulf
+            badboy = 5
+			1165 = { add_core = THIS } 
+			1162 = { add_core = THIS }
+			}
+		ai_will_do = { factor = 1 }
+	}
+	found_dar_es_salaam = {
+		picture = tanzania_shop
+		potential = {
+			owns = 2036
+			capital_scope = {
+				OR = {
+					has_country_flag = sunni_country
+					has_country_flag = shiite_country
+					has_country_flag = ibadi_country
+				}
+			}
+			NOT = { has_global_flag = dar_es_salaam_built }
+		}
+
+		allow = {
+			war = no
+			money = 500
+			OR = {
+				civilized = yes
+				admin_reform = yes_admin_reform
+				civilization_progress = 0.5
+				year = 1865
+			}
+		}
+
+		effect = {
+			set_global_flag = dar_es_salaam_built
+			money = -500
+			2036 = { any_pop = { militancy = -1 } add_province_modifier = { name = recently_built_city duration = 365 } change_province_name = "Dar Es Salaam" }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}
+
